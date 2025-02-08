@@ -1,0 +1,27 @@
+{{ define "main" }}
+<!-- nav -->
+    {{ partial "back_link.html" .}}
+    <div class="main-container">
+<!-- left -->
+        <div class="left-content">
+            <center>
+                <!-- <header>
+                    <h3>{{ $.Site.Title }}</h3>
+                </header> -->
+                {{ .Content }}
+            </center>
+        </div>
+<!-- right -->
+        <div class="right-content">
+            <!-- main content -->
+            {{ partial "menu_item.html" (dict "context" . "collection" $.Site.Data.menu.entries) }}
+        </div>
+    </div>
+<!-- Footer -->
+    {{ if .Site.Params.theme_config.isShowFooter }}
+    <hr>
+    <center style="font-size: 14px !important; color: #898989 !important; font-weight: 400 !important;">
+        Powered by Hugo Theme <a href='https://github.com/hanwenguo/hugo-theme-nostyleplease' target='_blank' style="font-size: 14px !important; color: #898989 !important; font-weight: 400 !important;">nostyleplease</a>
+    </center>
+    {{ end }}
+{{ end }}
