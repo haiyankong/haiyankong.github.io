@@ -53,7 +53,7 @@
 
 @mixin light-appearance {
   // @include theme(#ffffff, #212121, #666666, #23ABF2, #ffd900, #ffd900);
-  @include theme(#E6E6E6, #212121, #666666, #CC1F09, #ffd900, #a7f1c8);
+  @include theme(#FAFAFA, #212121, #666666, #CC1F09, #ffd900, #a7f1c8);
 }
 
 body[a="dark"] { @include dark-appearance; }
