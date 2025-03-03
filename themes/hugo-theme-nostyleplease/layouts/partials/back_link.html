@@ -1,0 +1,5 @@
+{{ if .Site.Params.theme_config.isNav }}
+    <a href="{{ "" | relURL }}">Home</a>&nbsp;&nbsp;&nbsp;
+    <a href="javascript:history.back()">{{ $.Site.Params.theme_config.back_text }}</a>&nbsp;&nbsp;&nbsp;
+    <a href="{{ .Site.Params.theme_config.link1 }}">{{ $.Site.Params.theme_config.text1 }}</a>&nbsp;&nbsp;&nbsp;
+{{ end }}
