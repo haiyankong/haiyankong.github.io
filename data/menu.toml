@@ -18,17 +18,12 @@
 #entries = [{ title = "to edit these menus, edit data/menu.toml file" }]
 
 [[entries]]
-title = "About me"
+title = "About Me"
     [[entries.entries]]
-    title = "I am currently a research assistant at the Institute of Psychology, Chinese Academy of Sciences. Before that, I graduated with the Master of Science in Psychology from Nanjing Normal University in China in 2023."
-    [[entries.entries]]
-    title = "How to <a href='https://namedrop.io/haiyankong' target='_blank'>pronounce</a> my name."
-    #[[entries.entries]]
-    #title = "Contact: <a href='mailto: haiyankong@hotmail.com' target='_blank'>haiyankong@hotmail.com</a>"
+    title = "I am currently a research assistant at the Institute of Psychology, Chinese Academy of Sciences. Before that, I earned my Master of Science in Psychology from Nanjing Normal University, China, in 2023."
 
 [[entries]]
 title = "Publication / Manuscript"
-#title = "Publication / Manuscript&nbsp;&nbsp;<a href='https://scholar.google.com/citations?user=-BuNrlEAAAAJ&hl=en' target='_blank'>[Google Scholar]</a>"
     [[entries.entries]]
     title = "Li, X., Shen, H., <b>Kong, H.</b>, & Xie, J. (2023). Autistic traits predict social avoidance and distress: The chain mediating role of perceived stress and interpersonal alienation. <i>Scandinavian Journal of Psychology, 64</i>, 802-809.&nbsp;<a href='https://doi.org/10.1111/sjop.12946' target='_blank'>[DOI]</a>"
     [[entries.entries]]
@@ -38,6 +33,4 @@ title = "Publication / Manuscript"
 title = "Misc"
     [[entries.entries]]
     title = "In my free time, I like running. Here is my <a href='https://haiyankong.github.io/workout/' target='_blank'>running map</a>."
-    #[[entries.entries]]
-    #title = "<b>Hugo Sewing</b>: Hugo Sewing is a Hugo theme for static websites that I created. It is a simple and flexible theme suitable for personal blog and group website.&nbsp;<a href='https://hugo-sewing.vercel.app/' target='_blank'>[Demo]</a>&nbsp;<a href='https://github.com/HaiyanKong/hugo-sewing' target='_blank'>[Repository]</a>&nbsp;<a href='https://github.com/HaiyanKong/hugo-sewing-template' target='_blank'>[Template]</a>"
 

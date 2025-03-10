@@ -1,6 +1,10 @@
 <a href="{{ .Get "href" }}" target="{{ .Get "target" }}" 
-    style="display: inline-block; margin-right: 10px; color: {{ .Get "color" | default "inherit" }}; text-decoration: none;">
-    <img src="{{ .Get "src" }}" alt="{{ .Get "alt" }}" style="width: {{ .Get "width" }}; height: auto;">
+    class="icon-svg {{ if .Get "color" }}icon-svg--color{{ end }}" 
+    style="{{ if .Get "color" }}--link-color: {{ .Get "color" }};{{ end }}">
+        <img src="{{ .Get "src" }}" 
+            alt="{{ .Get "alt" }}" 
+            class="icon-svg-image" 
+            style="width: {{ .Get "width" }};">
 </a>
 
 <!-- Usage -->

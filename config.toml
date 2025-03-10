@@ -33,7 +33,7 @@ theme = ["hugo-theme-nostyleplease"]
 
   [markup.tableOfContents]
     startLevel = 1
-    endLevel   = 3
+    endLevel   = 2
     ordered    = false
 
 [params]
@@ -41,9 +41,10 @@ theme = ["hugo-theme-nostyleplease"]
     appearance        = "light"
     date_format       = "2006-01-02"
     isListGroupByDate = false
-    isShowFooter      = true
+    
+    isShowFooter      = true # ...\layouts\index.html
 
-    isNav = false
-    back_text = "..."
-    link1 = "demo"
-    text1 = "Demo"
+    isNav = false # ...\layouts\partials\back_link.html
+    #back_text = "..."
+    #link1 = "demo"
+    #text1 = "Demo"

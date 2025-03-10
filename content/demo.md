@@ -1,5 +1,5 @@
 ---
-title: "Theme Demo"
+title: "Demo"
 slug: "demo"
 date: 2022-09-30
 custom_js: [mouse_coords]
@@ -23,32 +23,8 @@ tocBorder = true
   appearance = "auto"
   ```
 
-# Shortcodes
-
-## Details
-
-{{< details summary="Click me" >}}
-A lot of text or something else.
-{{< /details >}}
-
-## Link
-
-{{< link "https://www.bing.com/" >}}Bing{{< /link >}}
 
 # Markdown
-
-# H1
-
-## H2
-
-### H3
-
-#### H4
-
-##### H5
-
-###### H6
-
 
 ## Paragraph
 
@@ -87,7 +63,7 @@ Officia dolore laborum aute incididunt commodo nisi velit est est elit et dolore
 
 ## Code
 
-### Highlighted
+Here is some `inline code`!
 
 {{< highlight javascript >}}
 const ultimateTruth = 'this theme is the best!';
@@ -112,9 +88,12 @@ func main() {
 }
 ```
 
-### Inline code
+## Footnote
 
-And here is some `inline code`!
+footnote footnote footnote footnote footnote footnote[^1]
+
+[^1]: footnote footnote footnote footnote footnote footnote footnote footnote.
+
 
 ## Table
 
@@ -125,18 +104,27 @@ Table1
 | Item 1          | Item 2          | Item 3          | Item 4          | Item 5          |
 | Item 1          | Item 2          | Item 3          | Item 4          | Item 5          |
 
-## Image
+# Shortcodes
 
-### simple image
+## Details
 
-![Super wide](/demo.png)
+{{< details summary="Click me" >}}
+A lot of text or something else.
+{{< /details >}}
 
-### image with link
+## Figure
 
-[![Test](/demo.png)](https://www.bing.com/)
+{{< figure 
+    src="/demo.png"
+    alt="demo"
+    width="600px"
+    caption="11111111"
+    >}}
 
-## footnote
+## Icon-svg
 
-footnote footnote footnote footnote footnote footnote[^1]
+{{< icon-svg href="https://www.bing.com/" target="_blank" src="/icon/email-outlook.svg" alt="Icon" width="50px" >}}
 
-[^1]: footnote footnote footnote footnote footnote footnote footnote footnote.
+## Link
+
+{{< link "https://www.bing.com/" >}}Bing{{< /link >}}
