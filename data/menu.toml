@@ -1,36 +1,18 @@
-#[[entries]]
-#title = "About"
-#  [[entries.entries]]
-#  title = "Hugo theme ported from <a href='https://github.com/riggraz/no-style-please' target='_blank'>riggraz/no-style-please</a>."
-#  entries = [{ title = "to edit these menus, edit data/menu.toml file" }]
-#  [[entries.entries]]
-#  title = "github repo"
-#  url = "https://github.com/hanwenguo/hugo-theme-nostyleplease"
-#  [[entries.entries]]
-#  title = "with subitems"
-#    [[entries.entries.entries]]
-#    title = "with subsubitems"
-#    [[entries.entries.entries]]
-#    title = "example page"
-#    url = "/about/"
-#[[entries]]
-#title = "PRO TIP"
-#entries = [{ title = "to edit these menus, edit data/menu.toml file" }]
-
 [[entries]]
-title = "About Me"
-    [[entries.entries]]
-    title = "I am currently a research assistant at the Institute of Psychology, Chinese Academy of Sciences. Before that, I earned my Master of Science in Psychology from Nanjing Normal University, China, in 2023."
-
+title = "About"
+  [[entries.entries]]
+  title = "Hugo theme ported from <a href='https://github.com/riggraz/no-style-please' target='_blank'>riggraz/no-style-please</a>."
+  entries = [{ title = "to edit these menus, edit data/menu.toml file" }]
+  [[entries.entries]]
+  title = "github repo"
+  url = "https://github.com/hanwenguo/hugo-theme-nostyleplease"
+  [[entries.entries]]
+  title = "with subitems"
+    [[entries.entries.entries]]
+    title = "with subsubitems"
+    [[entries.entries.entries]]
+    title = "example page"
+    url = "/about/"
 [[entries]]
-title = "Publication / Manuscript"
-    [[entries.entries]]
-    title = "Li, X., Shen, H., <b>Kong, H.</b>, & Xie, J. (2023). Autistic traits predict social avoidance and distress: The chain mediating role of perceived stress and interpersonal alienation. <i>Scandinavian Journal of Psychology, 64</i>, 802-809.&nbsp;<a href='https://doi.org/10.1111/sjop.12946' target='_blank'>[DOI]</a>"
-    [[entries.entries]]
-    title = "<b>Kong, H.</b>, Xie, J., Fen, D., Li, X., Wang, X., & Huang, Y. Autistic traits and depressive symptoms in the general population: Mediating roles of social camouflaging, self-concept clarity, and self-disgust. <a href='https://osf.io/preprints/psyarxiv/drjz9' target='_blank'>[Preprint]</a>"
-
-[[entries]]
-title = "Misc"
-    [[entries.entries]]
-    title = "In my free time, I like running. Here is my <a href='https://haiyankong.github.io/workout/' target='_blank'>running map</a>."
-
+title = "PRO TIP"
+entries = [{ title = "to edit these menus, edit data/menu.toml file" }]

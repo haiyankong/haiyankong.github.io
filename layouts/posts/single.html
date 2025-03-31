@@ -1,0 +1,18 @@
+{{ define "main" }}
+    <article>
+        <center>
+            <h1>{{ .Title }}</h1>
+            <p>
+                <time datetime="{{ .Date }}">
+                    {{ .Date | time.Format site.Params.date_format }}
+                </time>
+            </p>
+        </center>
+        {{ if .Params.toc }}
+            <aside {{ if .Params.tocBorder }} class="toc" {{ end }}>
+                {{ .TableOfContents }}
+            </aside>
+        {{ end }}
+        {{ .Content }}
+    </article>
+{{ end }}

@@ -2,21 +2,20 @@
 title: "Demo"
 slug: "demo"
 date: 2022-09-30
-custom_js: [mouse_coords]
 toc: true
 tocBorder: true
 ---
 
-# Basic settings
+# 1 Basic settings
 
-## TOC
+## 1.1 TOC
 
 ```toml
 toc = true
 tocBorder = true
 ```
 
-## Styles
+## 1.2 Light/Dark
 
 `/config.toml`
   ```toml
@@ -24,19 +23,29 @@ tocBorder = true
   ```
 
 
-# Markdown
+# 2 Markdown
 
-## Paragraph
+## 2.1 Heading
 
-Incididunt ex adipisicing ea ullamco consectetur in voluptate proident fugiat tempor deserunt reprehenderit ullamco id dolore laborum.
+### H3
 
-Officia dolore laborum aute incididunt commodo nisi velit est est elit et dolore elit exercitation. Enim aliquip magna id ipsum aliquip consectetur ad nulla quis. Incididunt pariatur dolor consectetur cillum enim velit cupidatat laborum quis ex.
+#### H4
 
-## hr
+##### H5
+
+###### H6
+
+## 2.2 Paragraph
+
+Incididunt ex adipisicing ea ullamco consectetur in voluptate proident fugiat tempor deserunt reprehenderit ullamco id dolore laborum. Incididunt ex adipisicing ea ullamco consectetur in voluptate proident fugiat tempor deserunt reprehenderit ullamco id dolore laborum. Incididunt ex adipisicing ea ullamco consectetur in voluptate proident fugiat tempor deserunt reprehenderit ullamco id dolore laborum.
+
+Officia dolore laborum aute incididunt commodo nisi velit est est elit et dolore elit exercitation. Enim aliquip magna id ipsum aliquip consectetur ad nulla quis. Incididunt pariatur dolor consectetur cillum enim velit cupidatat laborum quis ex. Incididunt ex adipisicing ea ullamco consectetur in voluptate proident fugiat tempor deserunt reprehenderit ullamco id dolore laborum. Incididunt ex adipisicing ea ullamco consectetur in voluptate proident fugiat tempor deserunt reprehenderit ullamco id dolore laborum. Incididunt ex adipisicing ea ullamco consectetur in voluptate proident fugiat tempor deserunt reprehenderit ullamco id dolore laborum. Incididunt ex adipisicing ea ullamco consectetur in voluptate proident fugiat tempor deserunt reprehenderit ullamco id dolore laborum.
+
+## 2.3 hr
 
 ---
 
-## List
+## 2.4 List
 
 ### Ordered List
 
@@ -57,11 +66,13 @@ Officia dolore laborum aute incididunt commodo nisi velit est est elit et dolore
     - Clementine
 - Ut aute ipsum occaecat nisi culpa Lorem id occaecat cupidatat id id magna laboris ad duis. Fugiat cillum dolore veniam nostrud proident sint consectetur eiusmod irure adipisicing.
 
-## Blockquote
+## 2.5 Blockquote
 
 > Suspendisse tempus dolor nec risus sodales posuere. Proin dui dui, mollis a consectetur molestie, lobortis vitae tellus.
+> 
+> **Note** that you can use _Markdown syntax_ within a blockquote.
 
-## Code
+## 2.6 Code
 
 Here is some `inline code`!
 
@@ -88,43 +99,45 @@ func main() {
 }
 ```
 
-## Footnote
+## 2.7 Footnote
 
 footnote footnote footnote footnote footnote footnote[^1]
 
 [^1]: footnote footnote footnote footnote footnote footnote footnote footnote.
 
+## 2.8 Table
 
-## Table
-
-Table1
-
-| Table Heading 1 | Table Heading 2 | Center align    | Right align     | Table Heading 5 |
+| Table Heading 1 | Table Heading 2 | Center align    | Right align     | Left align(default) |
 | :-------------- | :-------------- | :-------------: | --------------: | :-------------- |
-| Item 1          | Item 2          | Item 3          | Item 4          | Item 5          |
-| Item 1          | Item 2          | Item 3          | Item 4          | Item 5          |
+| Item 1            | Item 2            | Italics             | Bold              | Code              |
+| Item 1            | Item 2            | _italics_          | **bold**        | `code`           |
 
-# Shortcodes
+## 2.9 Link
 
-## Details
+[Bing](https://www.bing.com/)
+
+## 2.10 Mark
+
+juki7ujtyhre <mark>uyjthree</mark> juki7ujtyhre juki7ujtyhre juki7ujtyhre juki7ujtyhre
+
+
+# 3 Shortcodes
+
+
+## 3.1 Details
 
 {{< details summary="Click me" >}}
 A lot of text or something else.
 {{< /details >}}
 
-## Figure
+## 3.2 Iconcode
 
-{{< figure 
-    src="/demo.png"
-    alt="demo"
-    width="600px"
-    caption="11111111"
-    >}}
+{{< iconcode href="https://www.bing.com/" src="/icon/triangle-exclamation.svg" width="50px" >}}
 
-## Icon-svg
+## 3.3 PDF
 
-{{< icon-svg href="https://www.bing.com/" target="_blank" src="/icon/email-outlook.svg" alt="Icon" width="50px" >}}
+{{< pdf src="/demo.pdf" >}}
 
-## Link
+## 3.4 Figure (default)
 
-{{< link "https://www.bing.com/" >}}Bing{{< /link >}}
+{{< figure src="/demo.png" width="600px" caption="caption">}}

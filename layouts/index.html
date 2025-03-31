@@ -1,0 +1,44 @@
+{{ define "main" }}
+<!-- left -->
+    <div class="main-container">
+        <div class="left-content">
+            <center>
+                <header>
+                    <h4>Haiyan Kong | 孔海燕</h4>
+                </header>
+                
+                <figure>
+                    <img src="/avatar.jpg" alt="avatar" width="222px">
+                </figure>
+                
+                <audio controls="" style="width: 250px; height: 50px;">
+                    <source src="https://haiyankong.github.io/name.mp3">
+                    Your browser does not support the audio element.
+                </audio>
+
+                <p>
+                    <a href="mailto: haiyankong@hotmail.com" target="_blank" class="iconcode">
+                        <img src="/icon/email.svg" class="iconcode-image" style="width: 30px;">
+                    </a>
+                    <a href="https://scholar.google.com/citations?hl=en&user=-BuNrlEAAAAJ" target="_blank" class="iconcode">
+                        <img src="/icon/googlescholar.svg" class="iconcode-image" style="width: 30px;">
+                    </a>
+                    <a href="https://github.com/haiyankong" target="_blank" class="iconcode">
+                        <img src="/icon/github.svg" class="iconcode-image" style="width: 30px;">
+                    </a>
+                    <a href="https://bsky.app/profile/haiyankong.bsky.social" target="_blank" class="iconcode">
+                        <img src="/icon/bluesky.svg" class="iconcode-image" style="width: 30px;">
+                    </a>
+                    <a href="https://x.com/haiyan_kong" target="_blank" class="iconcode">
+                        <img src="/icon/x.svg" class="iconcode-image" style="width: 30px;">
+                    </a>
+                </p>
+            </center>
+        </div>
+<!-- right -->
+        <div class="right-content">
+            {{ .Content }}
+            <!-- {{ partial "menu_item.html" (dict "context" . "collection" $.Site.Data.menu.entries) }} -->
+        </div>
+    </div>
+{{ end }}

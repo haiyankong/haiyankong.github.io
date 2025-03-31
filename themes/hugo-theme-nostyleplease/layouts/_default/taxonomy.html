@@ -1,8 +1,0 @@
-{{ define "main" }}
-<!-- nav -->
-    {{ partial "back_link.html" .}}
-<!-- content -->
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
-    {{ partial "post_list.html" (dict "context" .)}}
-{{ end }}

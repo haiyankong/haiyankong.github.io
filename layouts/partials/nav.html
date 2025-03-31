@@ -1,0 +1,10 @@
+{{ if .Site.Params.orNotNav }}
+    <center>
+        <div class="nav-style">
+            <ul>
+                <a class="nav-custom {{ if eq .RelPermalink "/" }}nav-active{{ end }}" href="{{ "" | relURL }}">Home</a>
+                <a class="nav-custom {{ if eq .RelPermalink "/demo/" }}nav-active{{ end }}" href="/demo">Demo</a>
+            </ul>
+        </div>
+    </center>
+{{ end }}
