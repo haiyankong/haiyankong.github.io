@@ -1,0 +1,58 @@
+baseURL                 = '/'
+languageCode            = 'en-us'
+DefaultContentLanguage  = "en"
+title                   = "Haiyan Kong"
+paginate                = 999999999999
+
+
+[outputs]
+  home                  = ["HTML"]
+  section               = ["HTML"]
+  taxonomy              = ["HTML"]
+  term                  = ["HTML"]
+
+
+[module]
+  [module.hugoVersion]
+    extended            = true
+    min                 = "0.41.0"
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe            = true            # for HTML
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block           = true
+        title           = true
+
+  [markup.highlight]
+    anchorLineNos       = false
+    codeFences          = true
+    guessSyntax         = false
+    hl_Lines            = ''
+    hl_inline           = false
+    lineAnchors         = ''
+    lineNoStart         = 1
+    lineNos             = false
+    lineNumbersInTable  = true
+    noClasses           = true
+    noHl                = false
+    style               = 'rrt'
+    tabWidth            = 4
+
+  [markup.tableOfContents]
+    startLevel          = 1
+    endLevel            = 2
+    ordered             = false
+
+
+[params]
+  orNotFooter           = true            # ...\layouts\_default\baseof.html
+  orNotNav              = false           # ...\layouts\partials\nav.html
+  #favicon              = "/favicon.jpg"  # ...\layouts\partials\head.html
+  date_format           = "2006/01/02"
+
+  [params.theme_config]
+    appearance          = "light"

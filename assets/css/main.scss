@@ -1,0 +1,325 @@
+@mixin theme($--bg-color, $--primary-text-color, $--secondary-text-color, $--link-color, $--selection-color, $--highlight-color, $--text-bg-color, $--text-title-b-color) {
+  background-color: $--bg-color;
+
+  color: $--primary-text-color;
+
+  a {
+    color: $--link-color; /* 链接颜色 */
+    text-decoration: underline solid; /* 实线下划线 */
+    text-decoration-thickness: 1px; /* 下划线粗细 */
+    text-underline-offset: 4px; /* 下划线与文本间距 */
+    &:hover {
+      text-decoration: underline dotted; /* 虚线下划线 */
+      text-decoration-thickness: 1px; /* 下划线粗细 */
+      // opacity: 0.3; /* 降低透明度 */
+      // background: $--text-bg-color; /* 背景色 */
+    }
+  }
+
+  b {
+    color: $--text-title-b-color;
+  }
+
+  h1 {font-size: 32px;}
+  h2 {font-size: 28px;}
+  h3 {font-size: 24px;}
+  h4 {font-size: 22px;}
+  h5, h6 {font-size: 20px;}
+  
+  h1, h2, h3, h4, h5, h6 { 
+    margin: 1.5rem 0rem 0.5rem 0rem; /* 外边距，上右下左 */
+    color: $--text-title-b-color;
+  }
+  
+  details {
+    // border: thin solid $--primary-text-color;
+    padding: 0.5rem 0rem 0.5rem 0rem; /* 内边距，上右下左 */
+  }
+
+  details summary {
+    color: $--primary-text-color;
+    text-decoration: none;
+  }
+
+  code:not(pre > code) {
+    background-color: $--primary-text-color;
+    color: $--bg-color;
+  }
+
+  *:target {
+    color: $--primary-text-color;
+  }
+
+  table, th, td {
+    border: thin solid $--primary-text-color;
+  }
+
+  .toc {
+    border: thin solid $--primary-text-color;
+    padding: 1rem 1rem 1rem 1rem; /* 内边距，上右下左 */
+  
+    a {
+      text-decoration: none !important; /* 移除下划线 */
+
+      &:hover {
+        background: none !important; /* 移除背景色 */
+      }
+    }
+  }
+
+  ::selection {
+    background: $--selection-color;
+  }
+
+  figcaption {
+    text-align: center;
+  }
+
+  hr {
+    margin: 1.5rem auto 1.5rem auto; /* 外边距，上右下左 */
+  }
+  
+  blockquote {
+    border: thin solid $--primary-text-color;
+    border-radius:20px; 
+    margin: 0px 0px 0px 0px; /* 外边距，上右下左 */
+    padding: 1rem 1rem 1rem 1rem; /* 内边距，上右下左 */
+  
+    p { margin: 0px 0px 0px 0px; } /* 外边距，上右下左 */
+  }
+
+  pre {
+    background: $--primary-text-color;
+    padding: 1em 1em 1em 1em; /* 内边距，上右下左 */
+    overflow-x: auto; /* Fix pre content overflowing parent without scroll bar */
+  }
+
+  table { width: 100%; }
+
+  table, th, td {
+    border: thin solid $--primary-text-color;
+    border-collapse: collapse;
+    padding: 0.4rem 0.4rem 0.4rem 0.4rem; /* 内边距，上右下左 */
+  }
+
+  mark{
+    // color: $--bg-color;
+    // background: $--highlight-color;
+  }
+
+
+  // ---------- footer ---------- start ---------- //
+  .footer-text {
+    margin: 1.5rem 0rem 0rem 0rem; /* 外边距，上右下左 */
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    min-width: 200px;
+    text-align: right;
+  }
+
+  .footer-link {
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    text-decoration: none !important;
+    color: $--primary-text-color !important;
+  }
+
+  .footer-link:hover {
+    background: none !important;
+  }
+
+  /* 小屏幕居中 */
+  @media (max-width: 768px) {
+    .footer-text {
+      text-align: center;
+    }
+  }
+
+  // ---------- footer ---------- end ---------- //
+
+
+  // ---------- shortcodes ---------- start ---------- //
+
+  //iconcode
+  .iconcode {
+    display: inline-block;
+    margin: 0px 10px 0px 0px; /* 外边距，上右下左 */
+    text-decoration: none;
+    transition: transform 0.5s ease-in-out; /* 过渡动画 */
+
+    &:hover {
+      background: none !important; /* 去除背景色 */
+      animation: rotate360 0.4s ease-in-out; /* 转一圈 */
+    }
+  }
+
+  @keyframes rotate360 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .iconcode-image {
+    width: 100%; /* 默认宽度 */
+    height: auto;
+  }
+
+  // ---------- shortcodes ---------- END ---------- //
+
+
+}
+
+
+@mixin dark-appearance {
+  @include theme(#505050, #FFFFFF, #7c7c7c, #FFFFFF, #9C9C9C, #F5991B, #868686, #FFFFFF);
+}
+
+@mixin light-appearance {
+  @include theme(#FFFFFF, #2b2b2b, #c6c6c6, #2b2b2b, #CECECE,#F5991B, #F4F1F1, #000000);
+}
+
+//#212121 #9C9C9C #FAFAFA #ffd900
+
+body[a="dark"] { @include dark-appearance; }
+body[a="light"] { @include light-appearance; }
+
+@media (prefers-color-scheme: dark) {
+  body[a="auto"] { @include dark-appearance; }
+}
+
+@media (prefers-color-scheme: light) {
+  body[a="auto"] { @include light-appearance; }
+}
+
+
+// ----------------------------------------------------------------------------------------------------------------------------  //
+
+
+// ---------- Basic Style ---------- Start ---------- //
+html { height: 100%; }
+
+body {
+  font-family: "Roboto", Arial, Helvetica, "Segoe UI", sans-serif, system-ui, "Apple Color Emoji", "Segoe UI Emoji","Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0rem 1rem 0rem 1rem; /* 外边距，上右下左 */
+  min-height: 100%;
+  overflow-wrap: break-word;
+}
+
+p { margin: 0.5rem 0rem 0.5rem 0rem; } 
+
+li { margin: 0.5rem 0rem 0.5rem 0rem; } 
+
+.w {
+  max-width: 1200px;
+  margin: 0rem auto 0rem auto; /* 外边距，上右下左 */
+  padding: 1.5rem 0rem 1.5rem 0rem; /* 内边距，上右下左 */
+}
+
+code:not(pre > code) {
+  padding: 0.1em 0.2em 0.1em 0.2em; /* 内边距，上右下左 */
+  font-size: 90%;
+}
+
+code.has-jax {
+  -webkit-font-smoothing: antialiased;
+  background: inherit !important;
+  border: none !important;
+  font-size: 100%;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0px auto 0px auto; /* 外边距，上右下左 */
+  // width: 220px;
+}
+// ---------- Basic Style ---------- END ---------- //
+
+
+
+
+
+// ---------- Home Layout  ---------- Start ---------- //
+.main-container {
+  display: flex; /* Flexbox 布局，使子元素水平排列 */
+  align-items: flex-start; /* 子元素在交叉轴上顶部对齐 */
+  gap: 30px; /* 子元素间距 */
+}
+
+.left-content {
+  width: 300px; /* 宽度 */
+  align-self: flex-start; /* 在 Flex 容器中顶部对齐 */
+  height: fit-content; /* 高度自适应内容，避免内容溢出 */
+  // background-color: #fafafa; /* 背景色 */
+  flex-grow: 0; /* 元素不放大 */
+  flex-shrink: 0; /* 元素不缩小 */
+  flex-basis: auto; /* 元素的大小不会根据容器变化而伸缩 */
+}
+
+.right-content {
+  flex: 1; /* 右侧内容占据剩余空间 */
+}
+
+/* 媒体查询：小屏幕（手机）布局调整 */
+@media (max-width: 768px) {
+  .main-container {
+    display: block; /* 将Flexbox布局改为块级布局，使子元素垂直排列 */
+  }
+
+  .left-content {
+    position: static; /* 取消粘性定位 */
+    width: 100%; /* 左侧内容宽度占满整个屏幕 */
+    margin: 0rem 0rem 0.5rem 0rem; /* 外边距，上右下左 */ /* 添加下边距，避免与下方内容紧贴 */
+  }
+
+  .right-content {
+    width: 100%; /* 右侧内容宽度占满整个屏幕 */
+    margin: 0rem 0rem 0.5rem 0rem; /* 外边距，上右下左 */ /* 添加下边距，避免与下方内容紧贴 */
+  }
+}
+// ---------- Home Layout  ---------- END ---------- //
+
+
+
+
+
+// ---------- nav-style ---------- start ---------- //
+.nav-style {
+  margin: 0rem 0rem 0.5rem 0rem; /* 外边距，上右下左 */
+  // width: 200px; /* 总宽度 */
+}
+
+.nav-style ul {
+  padding: 0; /* 移除无内边距，使内容紧贴边缘 */
+  margin: 0; /* 移除外边距，避免与其他元素产生不必要的间距 */
+}
+
+.nav-style ul a {
+  text-decoration: none; /* 移除下划线 */
+
+  &:hover {
+    background: none !important; /* 移除背景色 */
+  }
+}
+
+.nav-custom {
+  display: inline;
+  margin: 0px 20px 0px 0px; /* 外边距，上右下左 */
+}
+
+.nav-active {
+  font-weight: 800 !important;
+  text-decoration: underline !important;
+}
+
+// ---------- nav-style ---------- END ---------- //
+
+
+
+
+

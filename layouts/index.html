@@ -1,0 +1,46 @@
+{{ define "main" }}
+<!-- left -->
+    <div class="main-container">
+        <div class="left-content">
+            <center>
+                <header>
+                    <h4>Haiyan Kong | 孔海燕</h4>
+                </header>
+                
+                <figure>
+                    <img src="/avatar.jpg" alt="avatar" width="222px">
+                </figure>
+                
+                <details>
+                    <summary>How to pronounce my name</summary>
+                    <audio controls style="width: 250px; height: 50px;">
+                        <source src="https://haiyankong.github.io/name.mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </details>
+                
+                <p>
+                    <a href="mailto: haiyankong@hotmail.com" target="_blank" class="iconcode">
+                        <img src="/email.svg" class="iconcode-image" style="width: 30px;">
+                    </a>
+                    <a href="https://scholar.google.com/citations?hl=en&user=-BuNrlEAAAAJ" target="_blank" class="iconcode">
+                        <img src="/googlescholar.svg" class="iconcode-image" style="width: 30px;">
+                    </a>
+                    <a href="https://github.com/haiyankong" target="_blank" class="iconcode">
+                        <img src="/github.svg" class="iconcode-image" style="width: 30px;">
+                    </a>
+                    <a href="https://bsky.app/profile/haiyankong.bsky.social" target="_blank" class="iconcode">
+                        <img src="/bluesky.svg" class="iconcode-image" style="width: 30px;">
+                    </a>
+                    <a href="https://x.com/haiyan_kong" target="_blank" class="iconcode">
+                        <img src="/x.svg" class="iconcode-image" style="width: 30px;">
+                    </a>
+                </p>
+            </center>
+        </div>
+<!-- right -->
+        <div class="right-content">
+            {{ .Content }}
+        </div>
+    </div>
+{{ end }}

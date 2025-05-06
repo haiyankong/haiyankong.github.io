@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode }}">
+    {{- partial "head.html" . -}}
+    <body a="{{ $.Site.Params.theme_config.appearance | default "auto" }}">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+                {{ partial "nav.html" .}}
+                {{- block "main" . }}{{- end }}
+                {{ if .Site.Params.orNotFooter }}
+                    <div class="footer-text">
+                        © {{ now.Format "2006" }} {{ .Site.Title }}
+                        <div>
+                            Powered by <a href='https://gohugo.io/' target='_blank' class="footer-link">Hugo</a> & 
+                            <a href='https://github.com/hanwenguo/hugo-theme-nostyleplease' target='_blank' class="footer-link">No style please</a>
+                        </div>
+                    </div>
+                {{ end }}
+                {{ partial "footer.html" }}
+            </div>
+        </main>
+    </body>
+</html>
