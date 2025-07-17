@@ -4,7 +4,7 @@ title: "Home"
 
 #### About Me
 
-Welcome to my website! I am currently a research assistant at the Institute of Psychology, Chinese Academy of Sciences. Before that, I earned my Master of Science in Psychology from Nanjing Normal University and Bachelor of Science in Applied Psychology from Shandong Normal University.
+Welcome to my website! I am a graduate student working with Dr. Xiaoxue (Jessie) Fu in the [ASCENT Lab](https://ascentlab.org/) at the University of South Carolina.
 
 #### Publication / Manuscript
 
